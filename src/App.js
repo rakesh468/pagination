@@ -26,10 +26,11 @@ setcurrentPage(selectedpage);
   }
 
   const offset=currentPage * PER_PAGE;
+  //pagination//
   
   const currentPageData=data
   .slice(offset,offset+PER_PAGE)
-  .map((res,index)=><img key={index} src={res.thumbnailUrl}/>)
+  .map((res,index)=><img key={index} src={res.thumbnailUrl} alt={res.title}/>)
   const pagecount=Math.ceil(data.length / PER_PAGE);
   
   return (
